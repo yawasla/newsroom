@@ -1,10 +1,8 @@
 # Yawasla
 
-Yawasla is an online newsroom solution for associations managing mosques, helping them with their communication (Janaza prayer announcements, news, donation appeals, etc.), broadcasted via mail and push notifications.
+Yawasla is an online newsroom solution for associations managing mosques, helping them with their communication (Janaza prayer announcements, news, donation appeals, etc.), broadcast via mail and push notifications: **<https://yawasla.org>**
 
 [![license](https://img.shields.io/github/license/yawasla/newsroom.svg)](https://github.com/yawasla/newsroom/blob/main/LICENSE)
-
-> ⚠️ **Beta in development** — targeted launch: Q1 2027. See the [roadmap](#roadmap) below.
 
 The project is built around a minimal, lightweight open-source core (Apache 2.0 license), designed to be simple to install and use, even by beginners.
 
@@ -103,17 +101,19 @@ More architecture details in [CLAUDE.md](./CLAUDE.md).
 
 The project moves forward step by step, keeping a deliberately restricted beta scope:
 
-- **Q1 2027** — Technical foundation, authentication, organization & announcement management, public newsroom page
+- **Q1 2027** — Technical foundation, installation & automatic updates, authentication, back-office (organization, users, announcements), public newsroom page, push subscription
 - **Q2 2027** — Brevo mail integration, push notifications, mail subscription to announcements
-- **Q3 2027** — Full user management, account & display settings
+- **Q3 2027** — Full multi-user management, account & display settings
 - **Q4 2027** — Dashboard & charts, showcase site on yawasla.org, technical documentation
+- **Q1 2028** — Module management, prayer management, complete user management
 
 Full detail in [CLAUDE.md](./CLAUDE.md#todo).
 
 ## Contact
 
+- Website: <https://yawasla.org>
 - Mail: [contact@yawasla.org](mailto:contact@yawasla.org)
-- Github: <https://github.com/yawasla/newsroom>
+- GitHub: <https://github.com/yawasla/newsroom>
 
 ## Responsibility
 
