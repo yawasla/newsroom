@@ -1,10 +1,7 @@
-// Construit la distribution installable : dist/yawasla-x.y.z.zip (+ .sha256 et version.json).
-// Usage (depuis la racine du projet) : node scripts/release.mjs [--release]
-// Sans option : build de développeur (dist/yawasla-dev.zip). --release : version officielle nommée
-// d'après APP_VERSION, arbre git propre exigé.
-// Prérequis : Node 22+, npm, PHP et Composer dans le PATH. Aucune dépendance npm.
-// Composer : commande "composer", sinon un composer.phar du PATH (un alias du shell n'est pas visible
-// d'ici), sinon COMPOSER_BIN=/chemin/vers/composer.phar node scripts/release.mjs
+// Construit dist/yawasla-dev.zip (+ .sha256 et version.json) : node scripts/release.mjs [--release]
+// Prérequis : Node 22+, npm, PHP, Composer (hors PATH : COMPOSER_BIN=/chemin/vers/composer.phar).
+// Release officielle : APP_VERSION dans back/public/index.php (+ migration), commit, --release
+// (yawasla-x.y.z.zip, arbre git propre exigé), puis archive et version.json sur dist.yawasla.org.
 import { execFileSync, execSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
 import {

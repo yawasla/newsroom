@@ -67,20 +67,6 @@ node scripts/release.mjs
 
 This produces `dist/yawasla-dev.zip` with its `.sha256` checksum and `version.json` (`dist/` is not versioned), including any uncommitted changes. A git repository is not required. Uploading the archive and `version.json` together to a test distribution server lets you try the automatic update without committing: never edit `version.json` by hand, or its checksum will no longer match the archive.
 
-#### Official release
-
-1. Set the version in `back/public/index.php` (`define('APP_VERSION', 'x.y.z')`), with a matching migration in `back/database/migrations/` if the database schema changed
-2. Commit your changes: with `--release`, the script refuses to run on a dirty working tree, so that every published archive matches a commit
-3. From the project root, run:
-
-```
-node scripts/release.mjs --release
-```
-
-This produces `dist/yawasla-x.y.z.zip`, `dist/yawasla-x.y.z.zip.sha256` and `dist/version.json`.
-
-4. Upload the archive and `version.json` side by side to the distribution server (`https://dist.yawasla.org/`): installed sites detect the new version and update in one click from the administration. Optionally, tag the commit (`git tag vx.y.z`) and attach the archive and its checksum to a GitHub release.
-
 #### Deployment
 
 Unzip the archive on the server and point the site's document root to the `public/` folder, then open the site: the installation wizard takes over. SSL is required.
